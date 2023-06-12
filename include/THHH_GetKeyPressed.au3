@@ -121,38 +121,38 @@ func getkeypressed()
 				$Keypressed = "F12"
 				IniWrite($Setting, $SCIniEmpl, $SCFonctionName, '"'&'{'&'F12'&'}'&'"')
 			Elseif _IsPressed(31 ,$dll) Then
-				$Keypressed = "&"
-				IniWrite($Setting, $SCIniEmpl, $SCFonctionName, '"'&'{'&'&'&'}'&'"')
+				$Keypressed = "1"
+				IniWrite($Setting, $SCIniEmpl, $SCFonctionName, '"'&'{'&'1'&'}'&'"')
 			Elseif _IsPressed(32 ,$dll) Then
-				$Keypressed = "é"
-				IniWrite($Setting, $SCIniEmpl, $SCFonctionName, '"'&'{'&'é'&'}'&'"')
+				$Keypressed = "2"
+				IniWrite($Setting, $SCIniEmpl, $SCFonctionName, '"'&'{'&'2'&'}'&'"')
 ;			Elseif _IsPressed(33 ,$dll) Then											; Touche 3 (3"#) => Pose des soucis et reste tout le temps active
 ;				$Keypressed = '"'
 ;				IniWrite($Setting, $SCIniEmpl, $SCFonctionName, '"'&'{'&'"'&'}'&'"')
 			Elseif _IsPressed(34 ,$dll) Then
-				$Keypressed = "'"
-				IniWrite($Setting, $SCIniEmpl, $SCFonctionName, '"'&'{'&"'"&'}'&'"')
+				$Keypressed = "4"
+				IniWrite($Setting, $SCIniEmpl, $SCFonctionName, '"'&'{'&"4"&'}'&'"')
 			Elseif _IsPressed(35 ,$dll) Then
-				$Keypressed = "("
-				IniWrite($Setting, $SCIniEmpl, $SCFonctionName, '"'&'{'&'('&'}'&'"')
+				$Keypressed = "5"
+				IniWrite($Setting, $SCIniEmpl, $SCFonctionName, '"'&'{'&'5'&'}'&'"')
 			Elseif _IsPressed(36 ,$dll) Then
-				$Keypressed = "-"
-				IniWrite($Setting, $SCIniEmpl, $SCFonctionName, '"'&'{'&'-'&'}'&'"')
+				$Keypressed = "6"
+				IniWrite($Setting, $SCIniEmpl, $SCFonctionName, '"'&'{'&'6'&'}'&'"')
 			Elseif _IsPressed(37 ,$dll) Then
-				$Keypressed = "è"
-				IniWrite($Setting, $SCIniEmpl, $SCFonctionName, '"'&'{'&'è'&'}'&'"')
+				$Keypressed = "7"
+				IniWrite($Setting, $SCIniEmpl, $SCFonctionName, '"'&'{'&'7'&'}'&'"')
 			Elseif _IsPressed(38 ,$dll) Then
-				$Keypressed = "_"
-				IniWrite($Setting, $SCIniEmpl, $SCFonctionName, '"'&'{'&'_'&'}'&'"')
+				$Keypressed = "8"
+				IniWrite($Setting, $SCIniEmpl, $SCFonctionName, '"'&'{'&'8'&'}'&'"')
 			Elseif _IsPressed(39 ,$dll) Then
-				$Keypressed = "ç"
-				IniWrite($Setting, $SCIniEmpl, $SCFonctionName, '"'&'{'&'ç'&'}'&'"')
+				$Keypressed = "9"
+				IniWrite($Setting, $SCIniEmpl, $SCFonctionName, '"'&'{'&'9'&'}'&'"')
 			Elseif _IsPressed(30 ,$dll) Then
-				$Keypressed = "à"
-				IniWrite($Setting, $SCIniEmpl, $SCFonctionName, '"'&'{'&'à'&'}'&'"')
+				$Keypressed = "0"
+				IniWrite($Setting, $SCIniEmpl, $SCFonctionName, '"'&'{'&'0'&'}'&'"')
 			Elseif _IsPressed("BA" ,$dll) Then
-				$Keypressed = "$"
-				IniWrite($Setting, $SCIniEmpl, $SCFonctionName, '"'&'{'&'$'&'}'&'"')
+				$Keypressed = ";"
+				IniWrite($Setting, $SCIniEmpl, $SCFonctionName, '"'&'{'&';'&'}'&'"')
 			Elseif _IsPressed("BB" ,$dll) Then
 				$Keypressed = "="
 				IniWrite($Setting, $SCIniEmpl, $SCFonctionName, '"'&'{'&'='&'}'&'"')
@@ -160,26 +160,26 @@ func getkeypressed()
 				$Keypressed = ","
 				IniWrite($Setting, $SCIniEmpl, $SCFonctionName, '"'&'{'&','&'}'&'"')
 			Elseif _IsPressed("BE" ,$dll) Then
-				$Keypressed = ";"
-				IniWrite($Setting, $SCIniEmpl, $SCFonctionName, '"'&'{'&';'&'}'&'"')
+				$Keypressed = "."
+				IniWrite($Setting, $SCIniEmpl, $SCFonctionName, '"'&'{'&'.'&'}'&'"')
 			Elseif _IsPressed("BF" ,$dll) Then
+				$Keypressed = "/"
+				IniWrite($Setting, $SCIniEmpl, $SCFonctionName, '"'&'{'&'/'&'}'&'"')
+			Elseif _IsPressed("C0" ,$dll) Then
+				$Keypressed = "`"
+				IniWrite($Setting, $SCIniEmpl, $SCFonctionName, '"'&'{'&'`'&'}'&'"')
+			Elseif _IsPressed("DB" ,$dll) Then
+				$Keypressed = "["
+				IniWrite($Setting, $SCIniEmpl, $SCFonctionName, '"'&'{'&'['&'}'&'"')
+			Elseif _IsPressed("DC" ,$dll) Then
+				$Keypressed = "\"
+				IniWrite($Setting, $SCIniEmpl, $SCFonctionName, '"'&'{'&'\'&'}'&'"')
+			Elseif _IsPressed("DD" ,$dll) Then
+				$Keypressed = "]"
+				IniWrite($Setting, $SCIniEmpl, $SCFonctionName, '"'&'{'&']'&'}'&'"')
+			Elseif _IsPressed("DE" ,$dll) Then
 				$Keypressed = ":"
 				IniWrite($Setting, $SCIniEmpl, $SCFonctionName, '"'&'{'&':'&'}'&'"')
-			Elseif _IsPressed("C0" ,$dll) Then
-				$Keypressed = "ù"
-				IniWrite($Setting, $SCIniEmpl, $SCFonctionName, '"'&'{'&'ù'&'}'&'"')
-			Elseif _IsPressed("DB" ,$dll) Then
-				$Keypressed = ")"
-				IniWrite($Setting, $SCIniEmpl, $SCFonctionName, '"'&'{'&')'&'}'&'"')
-			Elseif _IsPressed("DC" ,$dll) Then
-				$Keypressed = "*"
-				IniWrite($Setting, $SCIniEmpl, $SCFonctionName, '"'&'{'&'*'&'}'&'"')
-			Elseif _IsPressed("DD" ,$dll) Then
-				$Keypressed = "^"
-				IniWrite($Setting, $SCIniEmpl, $SCFonctionName, '"'&'{'&'^'&'}'&'"')
-			Elseif _IsPressed("DE" ,$dll) Then
-				$Keypressed = "²"
-				IniWrite($Setting, $SCIniEmpl, $SCFonctionName, '"'&'{'&'²'&'}'&'"')
 			Elseif _IsPressed("DF" ,$dll) Then
 				$Keypressed = "!"
 				IniWrite($Setting, $SCIniEmpl, $SCFonctionName, '"'&'{'&'!'&'}'&'"')

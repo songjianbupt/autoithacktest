@@ -24,7 +24,7 @@ Global Const $OFS_OBJ_DESCRIPTOR=0x08
 Global Const $OFS_OBJ_TYPE=0x14
 ;;;;;;;;;-OFFSETS DE BASE-;;;;;;;;;;
 Global Const $Version = "3.3.5"
-Global Const $Build = "World of WarCraft (build 12340)"
+Global Const $Build = "World of WarCraft (build 50168)"
 Global Const $BuildAddr = 0x009E2A18
 Global Const $StaticPlayer = 0x00CD87A8
 Global Const $PbPointer1 = 0x34
