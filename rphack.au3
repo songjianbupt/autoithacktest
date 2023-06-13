@@ -50,7 +50,7 @@ $TransparenceGeneral = GUICtrlCreateLabel("Transparence", 25, 25, 70, 15)
 $Reset = GUICtrlCreateButton("Reset", 210, 3, 50, 50, $WS_GROUP)
 $About = GUICtrlCreateButton("About", 131, 3, 74, 30, $WS_GROUP)
 $State = GUICtrlCreateLabel("", 10, 638, 312, 17)
-GUICtrlSetFont(-1,9,600)
+GUICtrlSetFont(-1,5,400)
 $Optionsbutton = GUICtrlCreateButton("Options", 131, 32, 74, 20, $WS_GROUP)
 $WowProcesslistview = GUICtrlCreateListView("WoW|",266,1,65,73,$LVS_SINGLESEL)
 ;;; Création de la liste des processus
@@ -792,6 +792,7 @@ Do
 							reset()
 						EndIf
 					_MemoryClose($WowProcess)
+				AdlibUnRegister("globalf")
 				Exit
 			EndIf
 	;;;;;;;;;;;;;;;;;;;;;;;;;; PRIVE
@@ -1422,40 +1423,56 @@ EndFunc
 func trackherbes()
 	If GUICtrlRead($TrackHerbes)=$GUI_CHECKED Then
 		$TrackValue = _MemoryRead($PlayerBase2+$Ressources, $WowProcess, "dword")
-		_MemoryWrite($PlayerBase2 + $Ressources, $WowProcess,($Trackvalue+2), "dword")
+		$newTrackValue = BitOr($TrackValue, 2)
+		;_MemoryWrite($PlayerBase2 + $Ressources, $WowProcess,($Trackvalue+2), "dword")
+		_MemoryWrite($PlayerBase2 + $Ressources, $WowProcess,$newTrackvalue, "dword")
 	Else
 		$TrackValue = _MemoryRead($PlayerBase2+$Ressources, $WowProcess, "dword")
-		_MemoryWrite($PlayerBase2 + $Ressources, $WowProcess,($Trackvalue-2), "dword")
+		$newTrackValue = BitAnd($TrackValue, BitNot(2))
+		;_MemoryWrite($PlayerBase2 + $Ressources, $WowProcess,($Trackvalue-2), "dword")
+		_MemoryWrite($PlayerBase2 + $Ressources, $WowProcess,$newTrackvalue), "dword")
 	EndIf
  EndFunc
 
 func trackfilons()
 	If GUICtrlRead($TrackFilons)=$GUI_CHECKED Then
 		$TrackValue = _MemoryRead($PlayerBase2+$Ressources, $WowProcess, "dword")
-		_MemoryWrite($PlayerBase2 + $Ressources, $WowProcess,($Trackvalue+4), "dword")
+		$newTrackValue = BitOr($TrackValue, 4)
+		;_MemoryWrite($PlayerBase2 + $Ressources, $WowProcess,($Trackvalue+4), "dword")
+		_MemoryWrite($PlayerBase2 + $Ressources, $WowProcess,$newTrackvalue, "dword")
 	Else
 		$TrackValue = _MemoryRead($PlayerBase2+$Ressources, $WowProcess, "dword")
-		_MemoryWrite($PlayerBase2 + $Ressources, $WowProcess,($Trackvalue-4), "dword")
+		$newTrackValue = BitAnd($TrackValue, BitNot(4))
+		;_MemoryWrite($PlayerBase2 + $Ressources, $WowProcess,($Trackvalue-4), "dword")
+		_MemoryWrite($PlayerBase2 + $Ressources, $WowProcess,$newTrackvalue, "dword")
 	EndIf
  EndFunc
 
 func trackcoffres()
 	If GUICtrlRead($TrackCoffres)=$GUI_CHECKED Then
 		$TrackValueR = _MemoryRead($PlayerBase2+$Ressources, $WowProcess, "dword")
-		_MemoryWrite($PlayerBase2 + $Ressources, $WowProcess,($TrackvalueR+32), "dword")
+		$newTrackValue = BitOr($TrackValueR, 32)
+		;_MemoryWrite($PlayerBase2 + $Ressources, $WowProcess,($TrackvalueR+32), "dword")
+		_MemoryWrite($PlayerBase2 + $Ressources, $WowProcess,$newTrackvalue, "dword")
 	Else
 		$TrackValueR = _MemoryRead($PlayerBase2+$Ressources, $WowProcess, "dword")
-		_MemoryWrite($PlayerBase2 + $Ressources, $WowProcess,($TrackvalueR-32), "dword")
+		$newTrackValue = BitAnd($TrackValueR, BitNot(32))
+		;_MemoryWrite($PlayerBase2 + $Ressources, $WowProcess,($TrackvalueR-32), "dword")
+		_MemoryWrite($PlayerBase2 + $Ressources, $WowProcess,$newTrackvalue, "dword")
 	EndIf
  EndFunc
 
 func trackpoissons()
 	If GUICtrlRead($TrackPoissons)=$GUI_CHECKED Then
 		$TrackValueR = _MemoryRead($PlayerBase2+$Ressources, $WowProcess, "dword")
-		_MemoryWrite($PlayerBase2 + $Ressources, $WowProcess,($TrackvalueR+262144), "dword")
+		$newTrackValue = BitOr($TrackValueR, 262144)
+		;_MemoryWrite($PlayerBase2 + $Ressources, $WowProcess,($TrackvalueR+262144), "dword")
+		_MemoryWrite($PlayerBase2 + $Ressources, $WowProcess,$newTrackvalue, "dword")
 	Else
 		$TrackValueR = _MemoryRead($PlayerBase2+$Ressources, $WowProcess, "dword")
-		_MemoryWrite($PlayerBase2 + $Ressources, $WowProcess,($TrackvalueR-262144), "dword")
+		$newTrackValue = BitAnd($TrackValueR, BitNot(262144))
+		;_MemoryWrite($PlayerBase2 + $Ressources, $WowProcess,($TrackvalueR-262144), "dword")
+		_MemoryWrite($PlayerBase2 + $Ressources, $WowProcess,$newTrackvalue, "dword")
 	EndIf
  EndFunc
 
